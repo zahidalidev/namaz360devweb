@@ -1,118 +1,170 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namaz 360: Azan Time Alarm</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaz 360: Your Complete Islamic Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="assets/app-icon.png" alt="Namaz 360 Logo">
-                <h1>Namaz 360</h1>
-            </div>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#download">Download</a>
-                <a href="#about">About</a>
-            </div>
-        </nav>
+      <nav>
+        <div class="logo">
+          <img src="assets/app-icon.png" alt="Namaz 360 Logo" />
+          <h1>Namaz 360</h1>
+        </div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#quran">Quran</a>
+          <a href="#hadith">Hadith</a>
+          <a href="#duas">Duas</a>
+          <a href="#download">Download</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Namaz 360: Azan Time Alarm</h1>
-                <p>Your comprehensive Islamic Prayer Times companion</p>
-                <a href="https://play.google.com/store/apps/details?id=com.codex.prayer" class="download-btn">
-                    <i class="fab fa-google-play"></i> Download on Play Store
-                </a>
+      <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+          <div class="hero-text">
+            <h1>Your Complete Islamic Companion</h1>
+            <p>Accurate Prayer Times, Digital Quran, Hadith, Duas, and More</p>
+            <div class="hero-buttons">
+              <a href="#" class="download-btn primary">
+                <i class="fab fa-google-play"></i> Download Now
+              </a>
+              <a href="#features" class="download-btn secondary"> Explore Features </a>
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="about-content">
-                <h2>About Namaz 360</h2>
-                <p>Azan Times Alarm is a comprehensive Islamic Prayer Times App that provides accurate Namaz Time calculations and delivers alarm notifications for Azan. It covers virtually every city worldwide.</p>
-                
-                <div class="app-details">
-                    <div class="detail-item">
-                        <h3>Version</h3>
-                        <p>3.2.1</p>
-                    </div>
-                    <div class="detail-item">
-                        <h3>Last Updated</h3>
-                        <p>Dec 25, 2024</p>
-                    </div>
-                    <div class="detail-item">
-                        <h3>Requires Android</h3>
-                        <p>6.0 and up</p>
-                    </div>
-                    <div class="detail-item">
-                        <h3>Downloads</h3>
-                        <p>10,000+</p>
-                    </div>
-                </div>
-
-                <div class="key-features">
-                    <h3>Key Features</h3>
-                    <ul>
-                        <li>Multiple language support</li>
-                        <li>Multiple Quran variants with Audio and Translation</li>
-                        <li>Tasbih Feature for dhikr tracking</li>
-                        <li>Azkars with supplications and remembrances</li>
-                        <li>Automatic Azan Time Alarm</li>
-                        <li>GPS or manual city selection</li>
-                        <li>Prayer time notifications</li>
-                        <li>Hanafi and Shafi'i juristic methods</li>
-                        <li>Qibla direction compass</li>
-                        <li>Monthly prayer calendar</li>
-                        <li>Offline functionality</li>
-                    </ul>
-                </div>
+            <div class="app-stats">
+              <div class="stat-item">
+                <span>5★</span>
+                <p>Rating</p>
+              </div>
+              <div class="stat-item">
+                <span>200+</span>
+                <p>Countries</p>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="hero-image">
+            <img
+              class="hero-image-img"
+              src="assets/app-mockup.webp"
+              alt="Namaz 360 App"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="quran" class="quran-section">
+        <div class="section-content" data-aos="fade-up">
+          <h2 class="section-title">Digital Quran</h2>
+          <p class="section-description">
+            Experience the Holy Quran in multiple formats with crystal clear typography and
+            beautiful recitations
+          </p>
 
-        <section id="features" class="features">
-            <h2>Key Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-clock"></i>
-                    <h3>Accurate Prayer Times</h3>
-                    <p>Precise prayer timings for cities worldwide</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-compass"></i>
-                    <h3>Qibla Direction</h3>
-                    <p>Easy-to-use Qibla compass</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-bell"></i>
-                    <h3>Azan Notifications</h3>
-                    <p>Customizable prayer time alarms</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Digital Quran</h3>
-                    <p>Multiple Quran variants with audio</p>
-                </div>
+          <div class="quran-features">
+            <div class="quran-card">
+              <div class="card-icon">
+                <i class="fas fa-book-quran"></i>
+              </div>
+              <h3>Multiple Variants</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> 16-line Spacious Format</li>
+                <li><i class="fas fa-check"></i> 15-line Easy Reading</li>
+                <li><i class="fas fa-check"></i> Audio Recitation</li>
+              </ul>
             </div>
-        </section>
+
+            <div class="quran-card">
+              <div class="card-icon">
+                <i class="fas fa-headphones"></i>
+              </div>
+              <h3>Audio Features</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Multiple Reciters</li>
+                <li><i class="fas fa-check"></i> Verse by Verse Audio</li>
+                <li><i class="fas fa-check"></i> Offline Download</li>
+              </ul>
+            </div>
+
+            <div class="quran-card">
+              <div class="card-icon">
+                <i class="fas fa-language"></i>
+              </div>
+              <h3>Translations</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Multiple Languages</li>
+                <li><i class="fas fa-check"></i> Word by Word</li>
+                <li><i class="fas fa-check"></i> Tafsir Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hadith" class="hadith-section"></section>
+
+      <section id="features" class="features">
+        <h2>Comprehensive Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card" data-aos="fade-up">
+            <i class="fas fa-clock"></i>
+            <h3>Accurate Prayer Times</h3>
+            <p>Precise prayer timings for cities worldwide</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up">
+            <i class="fas fa-compass"></i>
+            <h3>Qibla Direction</h3>
+            <p>Easy-to-use Qibla compass</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up">
+            <i class="fas fa-bell"></i>
+            <h3>Azan Notifications</h3>
+            <p>Customizable prayer time alarms</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up">
+            <i class="fas fa-book-open"></i>
+            <h3>Digital Quran</h3>
+            <p>Multiple Quran variants with audio</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up">
+            <i class="fas fa-globe"></i>
+            <h3>Worldwide Coverage</h3>
+            <p>Prayer times for every city globally</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="prayer-times-demo"></section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>© 2024 Namaz 360. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+      <div class="footer-content">
+        <div class="footer-sections">
+          <p>© 2024 Namaz 360. All rights reserved.</p>
         </div>
+      </div>
     </footer>
-</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      })
+    </script>
+  </body>
 </html>
