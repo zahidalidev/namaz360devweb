@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quran - Namaz 360: Your Complete Islamic Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3883602119077591"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      function openDeepLink(url) {
+        // Get the current timestamp
+        const now = new Date().getTime()
+
+        // Determine if device is iOS
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+
+        // Try to open the app with the deep link
+        window.location.href = url
+
+        // Set a timeout to check if app was opened
+        setTimeout(function () {
+          if (new Date().getTime() - now < 1500) {
+            // If we're still here after 500ms, app probably isn't installed
+            if (isIOS) {
+              // Open App Store for iOS (replace with your iOS app ID)
+              window.location.href = 'https://apps.apple.com/app/idYOUR_APP_ID'
+            } else {
+              // Open Play Store for Android
+              window.location.href =
+                'https://play.google.com/store/apps/details?id=com.codex.prayer'
+            }
+          }
+        }, 500)
+      }
+
+      // Auto-detect deep link parameters
+      document.addEventListener('DOMContentLoaded', function () {
+        try {
+          // Check if we have parameters in the URL
+          const url = new URL(window.location.href)
+
+          // Get parameters from query string
+          const juz = url.searchParams.get('juz')
+          const index = url.searchParams.get('index') || 0
+          const ayahNumber = url.searchParams.get('ayahNumber')
+          const numberInSurah = url.searchParams.get('numberInSurah')
+
+          // If we have the necessary parameters
+          if (juz && ayahNumber && numberInSurah) {
+            console.log('Found parameters, creating deep link')
+            // Create the deep link URL with path format
+            const deepLink = `codexprayer://digitalquran/${juz}/${index}/${ayahNumber}/${numberInSurah}`
+
+            // Automatically try to open the app
+            openDeepLink(deepLink)
+          }
+        } catch (error) {
+          console.error('Error processing deep link parameters:', error)
+        }
+      })
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/app-icon.png" alt="Namaz 360 Logo" />
+            <h1>Namaz 360</h1>
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html#features">Features</a>
+          <a href="quran.html" class="active">Quran</a>
+          <a href="index.html#hadith">Hadith</a>
+          <a href="index.html#duas">Duas</a>
+          <a href="index.html#download">Download</a>
+          <a href="index.html#about">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero quran-hero">
+        <div class="hero-content" data-aos="fade-up">
+          <div class="hero-text">
+            <h1>Digital Quran Experience</h1>
+            <p>
+              Explore the Holy Quran with beautiful recitations, multiple translations, and
+              intuitive features
+            </p>
+            <div class="hero-buttons">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.codex.prayer"
+                class="download-btn primary"
+              >
+                <i class="fab fa-google-play"></i> Download App
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              class="hero-image-img"
+              src="assets/quran-mockup.webp"
+              alt="Namaz 360 Quran Feature"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="quran-full-section">
+        <div class="section-content" data-aos="fade-up">
+          <h2 class="section-title">Complete Quran Features</h2>
+
+          <div class="quran-features-extended">
+            <div class="feature-block">
+              <h3><i class="fas fa-book-quran"></i> Multiple Quran Formats</h3>
+              <p>
+                Experience the Holy Quran in different formats designed for easy reading and
+                memorization:
+              </p>
+              <ul>
+                <li>16-line Madani format with clear typography</li>
+                <li>15-line format for better readability</li>
+                <li>13-line format optimized for mobile devices</li>
+                <li>Word-by-word translation and transliteration</li>
+              </ul>
+            </div>
+
+            <div class="feature-block">
+              <h3><i class="fas fa-headphones"></i> Beautiful Recitations</h3>
+              <p>Listen to the Holy Quran recited by renowned Qaris:</p>
+              <ul>
+                <li>Multiple recitation styles including Hafs, Warsh, and Qaloon</li>
+                <li>Verse-by-verse audio playback</li>
+                <li>Background audio with auto page turning</li>
+                <li>Download recitations for offline listening</li>
+              </ul>
+            </div>
+
+            <div class="feature-block">
+              <h3><i class="fas fa-language"></i> Comprehensive Translations</h3>
+              <p>Understand the meaning with translations in multiple languages:</p>
+              <ul>
+                <li>English, Urdu, Arabic, Spanish, French, and more</li>
+                <li>Multiple translation options per language</li>
+                <li>Tafsir (exegesis) integration</li>
+                <li>Footnotes and context explanations</li>
+              </ul>
+            </div>
+
+            <div class="feature-block">
+              <h3><i class="fas fa-bookmark"></i> Personalization Features</h3>
+              <p>Make your Quran experience personal:</p>
+              <ul>
+                <li>Bookmarks and favorites</li>
+                <li>Custom tags and notes</li>
+                <li>Reading history and last read position</li>
+                <li>Customizable display settings (font size, theme, etc.)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quran-demo">
+        <div class="section-content" data-aos="fade-up">
+          <h2 class="section-title">Try Our Digital Quran</h2>
+          <p class="section-description">Experience the full features by downloading the app</p>
+
+          <div class="cta-container">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.codex.prayer"
+              class="cta-button"
+            >
+              <i class="fab fa-google-play"></i> Get on Google Play
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-sections">
+          <p>© 2024 Namaz 360. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      })
+    </script>
+  </body>
+</html>

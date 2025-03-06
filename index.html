@@ -31,21 +31,6 @@
 
         // Try to open the app with the deep link
         window.location.href = url
-
-        // Set a timeout to check if app was opened
-        setTimeout(function () {
-          if (new Date().getTime() - now < 1500) {
-            // If we're still here after 500ms, app probably isn't installed
-            if (isIOS) {
-              // Open App Store for iOS (replace with your iOS app ID)
-              window.location.href = 'https://apps.apple.com/app/idYOUR_APP_ID'
-            } else {
-              // Open Play Store for Android
-              window.location.href =
-                'https://play.google.com/store/apps/details?id=com.codex.prayer'
-            }
-          }
-        }, 500)
       }
 
       // Auto-detect deep link parameters
@@ -79,7 +64,7 @@
         </div>
         <div class="nav-links">
           <a href="#features">Features</a>
-          <a href="#quran">Quran</a>
+          <a href="quran.html">Quran</a>
           <a href="#hadith">Hadith</a>
           <a href="#duas">Duas</a>
           <a href="#download">Download</a>
