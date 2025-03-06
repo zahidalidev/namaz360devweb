@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.codex.prayer",
+      "sha256_cert_fingerprints": [
+        "EC:55:96:04:CB:A6:42:4F:34:57:A4:A8:48:A2:A8:FB:AD:90:74:9D:30:67:0C:50:00:BE:C3:6B:22:1E:84:C0",
+        "76:EC:45:FE:AF:3F:0D:1B:98:37:C2:29:D9:DB:FF:54:E1:EE:1F:DA:D6:51:AD:3E:62:A9:2D:25:A6:BB:C0:D2"
+      ]
+    }
+  }
+]

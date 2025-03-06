@@ -19,6 +19,60 @@
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3883602119077591"
       crossorigin="anonymous"
     ></script>
+
+    <script type="text/javascript">
+      // Your existing openDeepLink function
+      function openDeepLink(url) {
+        // Get the current timestamp
+        const now = new Date().getTime()
+
+        // Determine if device is iOS
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+
+        // Try to open the app with the deep link
+        window.location.href = url
+
+        // Set a timeout to check if app was opened
+        setTimeout(function () {
+          if (new Date().getTime() - now < 1500) {
+            // If we're still here after 500ms, app probably isn't installed
+            if (isIOS) {
+              // Open App Store for iOS (replace with your iOS app ID)
+              window.location.href = 'https://apps.apple.com/app/idYOUR_APP_ID'
+            } else {
+              // Open Play Store for Android
+              window.location.href =
+                'https://play.google.com/store/apps/details?id=com.codex.prayer'
+            }
+          }
+        }, 500)
+      }
+
+      // Auto-detect deep link parameters
+      document.addEventListener('DOMContentLoaded', function () {
+        // Check if we have parameters in the URL
+        const url = new URL(window.location.href)
+        const pathName = url.pathname
+
+        // Check if this is a /quran path
+        if (pathName === '/quran') {
+          // Get parameters
+          const juz = url.searchParams.get('juz')
+          const index = url.searchParams.get('index') || 0
+          const ayahNumber = url.searchParams.get('ayahNumber')
+          const numberInSurah = url.searchParams.get('numberInSurah')
+
+          // If we have the necessary parameters
+          if (juz && ayahNumber && numberInSurah) {
+            // Create the deep link URL
+            const deepLink = `codexprayer://digitalquran?juz=${juz}&index=${index}&ayahNumber=${ayahNumber}&numberInSurah=${numberInSurah}`
+
+            // Automatically try to open the app
+            openDeepLink(deepLink)
+          }
+        }
+      })
+    </script>
   </head>
   <body>
     <header>
