@@ -52,24 +52,20 @@
       document.addEventListener('DOMContentLoaded', function () {
         // Check if we have parameters in the URL
         const url = new URL(window.location.href)
-        const pathName = url.pathname
 
-        // Check if this is a /quran path
-        if (pathName === '/quran') {
-          // Get parameters
-          const juz = url.searchParams.get('juz')
-          const index = url.searchParams.get('index') || 0
-          const ayahNumber = url.searchParams.get('ayahNumber')
-          const numberInSurah = url.searchParams.get('numberInSurah')
+        // Get parameters from query string
+        const juz = url.searchParams.get('juz')
+        const index = url.searchParams.get('index') || 0
+        const ayahNumber = url.searchParams.get('ayahNumber')
+        const numberInSurah = url.searchParams.get('numberInSurah')
 
-          // If we have the necessary parameters
-          if (juz && ayahNumber && numberInSurah) {
-            // Create the deep link URL
-            const deepLink = `codexprayer://digitalquran?juz=${juz}&index=${index}&ayahNumber=${ayahNumber}&numberInSurah=${numberInSurah}`
+        // If we have the necessary parameters
+        if (juz && ayahNumber && numberInSurah) {
+          // Create the deep link URL with path format
+          const deepLink = `codexprayer://digitalquran/${juz}/${index}/${ayahNumber}/${numberInSurah}`
 
-            // Automatically try to open the app
-            openDeepLink(deepLink)
-          }
+          // Automatically try to open the app
+          openDeepLink(deepLink)
         }
       })
     </script>
