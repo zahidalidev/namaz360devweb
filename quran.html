@@ -54,16 +54,18 @@
           const url = new URL(window.location.href)
 
           // Get parameters from query string
-          const juz = url.searchParams.get('juz')
-          const index = url.searchParams.get('index') || 0
+          const activeIndex = url.searchParams.get('activeIndex') || 0
+          const ayahJuzNumber = url.searchParams.get('ayahJuzNumber')
           const ayahNumber = url.searchParams.get('ayahNumber')
+          const number = url.searchParams.get('number')
           const numberInSurah = url.searchParams.get('numberInSurah')
 
           // If we have the necessary parameters
-          if (juz && ayahNumber && numberInSurah) {
+          if (ayahJuzNumber && ayahNumber && numberInSurah) {
             console.log('Found parameters, creating deep link')
-            // Create the deep link URL with path format
-            const deepLink = `codexprayer://digitalquran/${juz}/${index}/${ayahNumber}/${numberInSurah}`
+
+            // Create the deep link URL with query string format instead of path format
+            const deepLink = `codexprayer://digitalquran/quran.html?activeIndex=${activeIndex}&ayahJuzNumber=${ayahJuzNumber}&ayahNumber=${ayahNumber}&number=${number}&numberInSurah=${numberInSurah}`
 
             // Automatically try to open the app
             openDeepLink(deepLink)
